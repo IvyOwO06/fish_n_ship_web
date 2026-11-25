@@ -1,0 +1,39 @@
+:root {
+  --bs-primary: #086eb6;
+  --bs-primary-rgb: 8, 110, 182;
+  --bs-link-color: #086eb6;
+  --bs-link-hover-color: #032852;
+  --bs-body-color: #032852;
+  --bs-body-bg: #f4f8fc;
+  --bs-border-color: #d5e2ef;
+  --bs-secondary-color: #60768b;
+}
+
+.btn-primary {
+  --bs-btn-bg: #086eb6;
+  --bs-btn-border-color: #086eb6;
+  --bs-btn-hover-bg: #032852;
+  --bs-btn-hover-border-color: #032852;
+  --bs-btn-active-bg: #032852;
+  --bs-btn-active-border-color: #032852;
+  --bs-btn-focus-shadow-rgb: 8, 110, 182;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.auth-page {
+  max-width: 520px;
+}
+
+.auth-card {
+  border: 1px solid #d5e2ef;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2.5rem rgb(3 40 82 / 10%);
+}
+
+.auth-card .form-control:focus {
+  border-color: #086eb6;
+  box-shadow: 0 0 0 .25rem rgb(8 110 182 / 18%);
+}

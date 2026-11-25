@@ -1,29 +1,31 @@
 <script setup>
 const props = defineProps({
-  id: Int16Array,
+  id: Number,
   name: String,
   image: String,
-  price: Float16Array,
+  price: Number,
 })
 
 const emit = defineEmits(['addToCart'])
 
 function addToCart() {
-  emit('addToCart', props.id)
+  emit('addToCart', {
+    id: props.id,
+    name: props.name,
+    price: props.price,
+  })
 }
-
 </script>
 
 <template>
-    <div class="order-card">
-        <h3>{{ name }}</h3>
-
-        <img :src="image" :alt="name">
-
-        <p>{{ price }}</p>
-
-        <button @click="addToCart">
-            Add To cart
-        </button>
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <img v-if="image" :src="image" :alt="name" class="card-img-top">
+      <div class="card-body d-flex flex-column">
+        <h2 class="h5 card-title">{{ name }}</h2>
+        <p class="card-text fs-5 fw-semibold mt-auto">€{{ price }}</p>
+        <button class="btn btn-primary" @click="addToCart">Add to cart</button>
+      </div>
     </div>
+  </div>
 </template>

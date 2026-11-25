@@ -4,6 +4,9 @@ import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import LoginView from '@/views/LoginView.vue'
 import OrderView from '@/views/OrderView.vue'
+import CartView from '@/views/CartView.vue'
+import LogoutView from '@/views/LogoutView.vue'
+import RegisterView from '@/views/RegisterView.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,7 +15,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: OrderView,
     },
     {
       path: '/about',
@@ -24,10 +27,25 @@ const router = createRouter({
       name: 'login',
       component: LoginView,
     },
+    // {
+    //   path: '/order',
+    //   name: 'order',
+    //   component: OrderView,
+    // },
     {
-      path: '/order',
-      name: 'order',
-      component: OrderView,
+      path: '/cart',
+      name: 'cart',
+      component: CartView,
+    },
+    {
+      path: '/logout',
+      name: 'logout',
+      component: LogoutView,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterView,
     },
   ],
 })
